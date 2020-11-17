@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid, GridColumn, GridRow, Icon } from "semantic-ui-react";
 import Side from "./Side";
 
 const MainContent = () => {

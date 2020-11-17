@@ -7,12 +7,11 @@ import Wallpaper from "./wallpaper/Wallpaper";
 import Plain from "./plain/Plain";
 import Background from "./background/Background";
 import { ThemeContext } from "../context/ThemeContext";
-import img from "./template/template/1.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCommentAlt } from "@fortawesome/free-solid-svg-icons";
+
+import TargetContent from "./TargetContent";
 
 const Side = () => {
-  const [theme] = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const [index, setIndex] = useState(0);
   const { activeColor, defaultColor } = theme;
 
@@ -123,13 +122,7 @@ const Side = () => {
           <Route exact path="/wallpaper" component={Wallpaper} />
           <Route exact path="/background" component={Background} />
         </Switch>
-
-        <div className="image-content">
-          <img src={img} alt="Ini Gambar Content" />
-          <div className="icon-content">
-            <FontAwesomeIcon color="white" icon={faCommentAlt} size="2x" />
-          </div>
-        </div>
+        <TargetContent />
       </div>
     </Router>
   );
